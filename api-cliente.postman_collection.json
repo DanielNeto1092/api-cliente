@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "19b130c0-755b-4a2b-b0ae-e560b2e50bd9",
+		"name": "api-cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/cliente/listarTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/listarTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"listarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/cliente/criarCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "{nome",
+							"value": "\"Daniel Neto\",",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "\"danielneto1092@gmail.com\",",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": "\"03594818179\",",
+							"type": "text"
+						},
+						{
+							"key": "dataNascimento",
+							"value": "\"30-10-1992\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/criarCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"criarCliente"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Daniel Neto",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/cliente/paginarListaTodos?pageNo=1&pageSize=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cliente/listaTodosPaginacao?pageNo=0&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"listaTodosPaginacao"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/cliente/alterarCliente?id=16",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/excluirCliente?id=34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"excluirCliente"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente/api/cliente/buscarPorId?id=12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/buscarPorId?id=161",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"buscarPorId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "161"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cliente/buscarPorCpf?cpf=01234567890",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cliente/buscarPorCpf?cpf=01234567890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"buscarPorCpf"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "01234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cliente/buscarPorId?id=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cliente/buscarPorId?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"buscarPorId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cliente/alterarCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Daniel da Silva Neto\",\r\n\"email\":\"danielneto1092@gmail.com\",\r\n\"cpf\":\"01234567890\",\r\n\"dataNascimento\":\"30/10/1992\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cliente/alterarCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"alterarCliente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
